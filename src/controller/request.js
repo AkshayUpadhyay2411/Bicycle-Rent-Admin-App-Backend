@@ -68,7 +68,7 @@ exports.createRequest = async (req,res) => {
 
 exports.getRequest = (req,res) => {  
     
-    Request.find({})
+    Request.find({  isResolved  : false })
     .exec( ( error , requests ) => {
 
         if (error) return res.status(400).json({ error });

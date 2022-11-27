@@ -71,7 +71,7 @@ exports.returnRequest = async (req,res) => {
 
 exports.getReturnRequest = (req,res) => {  
     
-    ReturnRequest.find({})
+    ReturnRequest.find({ isResolved : false })
     .exec( ( error , returnRequests ) => {
 
         if (error) return res.status(400).json({ error });

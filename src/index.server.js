@@ -22,6 +22,8 @@ const returnRequestRoutes = require('./routes/returnRequest');
 
 const deleteBicycleRoutes = require('./routes/deleteBicycle');
 
+const getDeleteUserRoutes = require('./routes/getDeleteUser');
+
 const env = require('dotenv');
 
 // #B
@@ -101,6 +103,8 @@ app.use('/api' , myBicyclesRoutes);
 app.use('/api' , returnRequestRoutes);
 
 app.use('/api' , deleteBicycleRoutes);
+
+app.use('/api' , getDeleteUserRoutes);
 
 app.listen(process.env.PORT , () => {
     console.log(`Server is running on Port ${process.env.PORT}`);
